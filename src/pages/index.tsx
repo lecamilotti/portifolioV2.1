@@ -1,12 +1,13 @@
-import type { NextPage } from 'next'
+import { Box, Flex, SimpleGrid, Text, theme } from "@chakra-ui/react";
+import { Header } from "../components/Header";
 
+import { Sidebar } from "../components/Sidebar";
 
-const Home: NextPage = () => {
+export default function Home () {
   return (
-    <>
-    <h1>teste</h1>
-    </>
-  )
+    <Flex direction="row" h="100vh" >
+      <Header />
+      <Sidebar />
+    </Flex>
+  );
 }
-
-export default Home
