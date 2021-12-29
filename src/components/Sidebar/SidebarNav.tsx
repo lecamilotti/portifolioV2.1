@@ -1,19 +1,50 @@
-import { Stack } from "@chakra-ui/react";
-import { RiContactsLine, RiDashboardLine, RiGitMergeLine, RiInputMethodLine } from "react-icons/ri";
+import { Flex, useBreakpointValue } from "@chakra-ui/react";
+import {
+  RiBarChartGroupedFill,
+  RiContactsLine,
+  RiHome2Fill,
+  RiProjector2Fill,
+} from "react-icons/ri";
 import { NavLink } from "./NavLink";
-import { NavSection } from "./NavSection";
 
 export function SidebarNav() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    md: true,
+  });
+
+  if (!isWideVersion) {
+    return (
+      <Flex direction="column">
+        <NavLink icon={RiHome2Fill} href="/">
+          Home
+        </NavLink>
+        <NavLink icon={RiProjector2Fill} href="/">
+          Projects
+        </NavLink>
+        <NavLink icon={RiBarChartGroupedFill} href="/">
+          About
+        </NavLink>
+        <NavLink icon={RiContactsLine} href="/">
+          Contact
+        </NavLink>
+      </Flex>
+    );
+  }
   return (
-    <Stack>
-    <NavSection title="GENERAL">
-      <NavLink icon={RiDashboardLine} href="/dashboard">Dashbord</NavLink>
-      <NavLink icon={RiContactsLine} href="/users">Users</NavLink>
-    </NavSection>
-    <NavSection title="AUTOMATION">
-      <NavLink icon={RiInputMethodLine} href="/forms">Forms</NavLink>
-      <NavLink icon={RiGitMergeLine} href="/automation">Automation</NavLink>
-    </NavSection>
-  </Stack>
+    <Flex direction={"row"}>
+      <NavLink icon={RiHome2Fill} href="/">
+        Home
+      </NavLink>
+      <NavLink icon={RiProjector2Fill} href="/">
+        Projects
+      </NavLink>
+      <NavLink icon={RiBarChartGroupedFill} href="/">
+        About
+      </NavLink>
+      <NavLink icon={RiContactsLine} href="/">
+        Contact
+      </NavLink>
+    </Flex>
   );
 }

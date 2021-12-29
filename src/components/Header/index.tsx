@@ -13,7 +13,7 @@ export function Header() {
   })
   return (
     <Flex as="header" w="100%"
-      maxW={1480}
+      maxW={1280}
       h="20"
       mx="auto"
       mt="4"
