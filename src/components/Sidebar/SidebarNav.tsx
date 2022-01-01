@@ -1,9 +1,12 @@
 import { Flex, useBreakpointValue } from "@chakra-ui/react";
 import {
   RiBarChartGroupedFill,
+  RiContactsBookLine,
   RiContactsLine,
   RiHome2Fill,
+  RiHomeFill,
   RiProjector2Fill,
+  RiSurveyFill,
 } from "react-icons/ri";
 import { NavLink } from "./NavLink";
 
@@ -15,7 +18,7 @@ export function SidebarNav() {
 
   if (!isWideVersion) {
     return (
-      <Flex direction="column" p="4">
+      <Flex direction="column" p="5">
         <NavLink icon={RiHome2Fill} href="/">
           Home
         </NavLink>
@@ -32,17 +35,17 @@ export function SidebarNav() {
     );
   }
   return (
-    <Flex direction={"row"} p="4" >
-      <NavLink icon={RiHome2Fill} p="1" href="/">
+    <Flex direction={"row"} p="5">
+      <NavLink icon={RiHomeFill} href="/">
         Home
       </NavLink>
-      <NavLink icon={RiProjector2Fill} p="1" href="/">
+      <NavLink icon={RiSurveyFill} href="/">
         Projects
       </NavLink>
-      <NavLink icon={RiBarChartGroupedFill} p="1" href="/">
+      <NavLink icon={RiContactsLine} href="/">
         About
       </NavLink>
-      <NavLink icon={RiContactsLine} p="1" href="/">
+      <NavLink icon={RiContactsBookLine} href="/">
         Contact
       </NavLink>
     </Flex>

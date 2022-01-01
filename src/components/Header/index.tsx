@@ -12,7 +12,7 @@ export function Header() {
     md: true,
   })
   return (
-    <Flex as="header" h="10" px="4" py="3" direction={isWideVersion ? "row" : "column"} alignItems="center" justifyContent="space-between">
+    <Flex as="header" px="5" py="5" direction={isWideVersion ? "row" : "column"} alignItems="center" justifyContent="space-between">
       <Flex alignItems="center" mr={isWideVersion ? "auto" : "0"}>
         {!isWideVersion && (
           <IconButton
