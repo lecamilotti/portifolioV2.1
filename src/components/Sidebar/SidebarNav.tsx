@@ -19,16 +19,16 @@ export function SidebarNav() {
   if (!isWideVersion) {
     return (
       <Flex direction="column" p="5">
-        <NavLink icon={RiHome2Fill} href="/">
+        <NavLink icon={RiHomeFill} href="/">
           Home
         </NavLink>
-        <NavLink icon={RiProjector2Fill} href="/">
+        <NavLink icon={RiSurveyFill} href="/">
           Projects
         </NavLink>
-        <NavLink icon={RiBarChartGroupedFill} href="/">
+        <NavLink icon={RiContactsLine} href="/">
           About
         </NavLink>
-        <NavLink icon={RiContactsLine} href="/">
+        <NavLink icon={RiContactsBookLine} href="/">
           Contact
         </NavLink>
       </Flex>
