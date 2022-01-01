@@ -12,14 +12,8 @@ export function Header() {
     md: true,
   })
   return (
-    <Flex as="header" w="100%"
-      maxW={1280}
-      h="20"
-      mx="auto"
-      mt="4"
-      px="6"
-      align="center">
-
+    <Flex as="header" h="10" px="4" py="3" direction={isWideVersion ? "row" : "column"} alignItems="center" justifyContent="space-between">
+      <Flex alignItems="center" mr={isWideVersion ? "auto" : "0"}>
         {!isWideVersion && (
           <IconButton
           aria-label="open toggle menu"
@@ -31,7 +25,7 @@ export function Header() {
           ></IconButton>
         )}
       <Logo/>
-
+      </Flex>
       
     </Flex>
   );

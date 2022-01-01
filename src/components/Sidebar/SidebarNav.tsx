@@ -15,7 +15,7 @@ export function SidebarNav() {
 
   if (!isWideVersion) {
     return (
-      <Flex direction="column">
+      <Flex direction="column" p="4">
         <NavLink icon={RiHome2Fill} href="/">
           Home
         </NavLink>
@@ -32,17 +32,17 @@ export function SidebarNav() {
     );
   }
   return (
-    <Flex direction={"row"}>
-      <NavLink icon={RiHome2Fill} href="/">
+    <Flex direction={"row"} p="4" >
+      <NavLink icon={RiHome2Fill} p="1" href="/">
         Home
       </NavLink>
-      <NavLink icon={RiProjector2Fill} href="/">
+      <NavLink icon={RiProjector2Fill} p="1" href="/">
         Projects
       </NavLink>
-      <NavLink icon={RiBarChartGroupedFill} href="/">
+      <NavLink icon={RiBarChartGroupedFill} p="1" href="/">
         About
       </NavLink>
-      <NavLink icon={RiContactsLine} href="/">
+      <NavLink icon={RiContactsLine} p="1" href="/">
         Contact
       </NavLink>
     </Flex>
