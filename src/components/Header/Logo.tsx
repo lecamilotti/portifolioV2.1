@@ -3,7 +3,7 @@ import { Flex, Text } from "@chakra-ui/react";
 
 export function Logo() {
   return (
-    <Flex direction="row">
+    <Flex direction="row" >
       <Text
         fontSize={["2xl", "3xl"]}
         fontWeight="bold"

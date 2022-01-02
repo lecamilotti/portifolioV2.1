@@ -61,6 +61,7 @@ export default function Hero() {
       <Box m="auto" p="auto" ml="10" w="50%">
         <Text>
           <Text as="h1" color="primary" fontWeight="bold" fontSize={["2xl", "3xl"]}>
+            
             Hi, I'm Leandro Camilotti
           </Text>
           <Text as="h2" color="gray.50" m={2} fontWeight="bold" fontSize="2xl">

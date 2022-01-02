@@ -32,7 +32,7 @@ export function SidebarNav() {
     );
   }
   return (
-    <Flex direction={"row"} p="5">
+    <Flex direction={"row"} p="5" >
       <NavLink icon={RiHomeFill} href="/">
         Home
       </NavLink>
