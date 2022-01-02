@@ -1,14 +1,13 @@
 import {
   Box,
   Button,
-  Center,
   Flex,
   Spacer,
-  Square,
   Text,
   useBreakpointValue,
-  Wrap,
 } from "@chakra-ui/react";
+import Aside from "../Aside";
+
 
 export default function Hero() {
   const isWideVersion = useBreakpointValue({
@@ -62,7 +61,7 @@ export default function Hero() {
       <Box m="auto">
         <Text>
           <Text as="h1" color="primary" fontWeight="bold" fontSize={["2xl", "4xl"]}>
-            Leandro Camilotti
+            Hi, I'm Leandro Camilotti
           </Text>
           <Text as="h2" color="gray.50" m={2} fontWeight="bold" fontSize="2xl">
             Front End Developer
@@ -92,7 +91,7 @@ export default function Hero() {
       </Box>
 
       <Spacer />
-      <Box p="25vh">Box 2</Box>
+      <Aside />
     </Flex>
     )
 }
