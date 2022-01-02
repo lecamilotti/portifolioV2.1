@@ -1,11 +1,8 @@
 import { Flex, useBreakpointValue } from "@chakra-ui/react";
 import {
-  RiBarChartGroupedFill,
   RiContactsBookLine,
   RiContactsLine,
-  RiHome2Fill,
   RiHomeFill,
-  RiProjector2Fill,
   RiSurveyFill,
 } from "react-icons/ri";
 import { NavLink } from "./NavLink";

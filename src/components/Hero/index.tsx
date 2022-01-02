@@ -21,7 +21,7 @@ export default function Hero() {
       <Box m="20">
         <Text>
           <Text as="h1" color="primary" fontWeight="bold" fontSize={["2xl", "4xl"]}>
-            Leandro Camilotti
+          Hi, I'm Leandro Camilotti
           </Text>
           <Text as="h2" color="gray.50" m={2} fontWeight="bold" fontSize={["21","2xl"]}>
             Front End Developer
@@ -58,9 +58,9 @@ export default function Hero() {
 
     return (
     <Flex maxW={1280} m="center" width={["100%", "100%", "100%", "100%"]}>
-      <Box m="auto">
+      <Box m="auto" p="auto" ml="10" w="50%">
         <Text>
-          <Text as="h1" color="primary" fontWeight="bold" fontSize={["2xl", "4xl"]}>
+          <Text as="h1" color="primary" fontWeight="bold" fontSize={["2xl", "3xl"]}>
             Hi, I'm Leandro Camilotti
           </Text>
           <Text as="h2" color="gray.50" m={2} fontWeight="bold" fontSize="2xl">

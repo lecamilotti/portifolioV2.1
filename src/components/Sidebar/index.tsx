@@ -29,7 +29,7 @@ export function Sidebar() {
    }
 
   return (
-    <Box as="aside" mr="8">
+    <Box mr="8">
       <SidebarNav />
     </Box>
   );
