@@ -1,13 +1,21 @@
-import { Grid, GridItem, Wrap } from "@chakra-ui/react";
+import { Box, Grid, GridItem, Wrap } from "@chakra-ui/react";
 
 export default function Projects() {
   return (
-    <Wrap overflow="hidden" maxW={1280} h="100vh">
-      <Grid templateColumns="repeat(5, 1fr)" gap={4}>
-        <GridItem colSpan={2} h="200px" w="200px" bg="tomato" />
-        <GridItem colSpan={2} h="200px" w="200px" bg="tomato" />
-        <GridItem colSpan={2} h="200px" w="200px" bg="tomato" />
+      <Grid
+        templateColumns="1fr, 1fr, 1fr, 1fr(auto-fit)"
+        gap={4}
+        overflow="hidden"
+        maxW={1280}
+        h="100vh"
+        w="100vw"
+        justify="center"
+      >
+        <GridItem colSpan={2} objectFit="fill" bg="tomato" > <Box>Teste</Box></GridItem>
+        
+        <GridItem colSpan={2} bg="tomato" />
+        <GridItem colSpan={2} bg="tomato" />
       </Grid>
-    </Wrap>
+  
   );
 }
