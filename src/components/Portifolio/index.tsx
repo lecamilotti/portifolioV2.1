@@ -1,5 +1,6 @@
 import { Box, Button, HStack, Image, SimpleGrid} from "@chakra-ui/react";
 import {FaFacebook, FaGithub, FaGlobe, FaTwitter} from "react-icons/fa";
+import ProjectsData from "../data";
 
 export default function Portifolio() {
   return (
@@ -14,8 +15,7 @@ export default function Portifolio() {
     color='gray.500'
   >
     <Box boxShadow='lg' maxW={400} maxH={400} rounded='lg' bg='white'>
-      <Image src="/../..images/dogGromming.gif" alt="dogGromming" />
-    
+       {ProjectsData.name}
     <HStack>
       <Button colorScheme='gray' leftIcon={<FaGithub />}>
         Github
