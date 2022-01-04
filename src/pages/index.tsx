@@ -1,15 +1,7 @@
-import {
-  Box,
-  Flex,
-  SimpleGrid,
-  Spacer,
-  Text,
-  theme,
-  Wrap,
-} from "@chakra-ui/react";
+import { Flex, Wrap } from "@chakra-ui/react";
 import { Header } from "../components/Header";
 import Hero from "../components/Hero";
-import Projects from "../components/Projects";
+import Portifolio from "../components/Portifolio";
 
 import { Sidebar } from "../components/Sidebar";
 
@@ -33,8 +25,8 @@ export default function Home() {
         <Hero />
       </Wrap>
       <Flex justify="center">
-        <Projects />
-        </Flex>
+        <Portifolio />
+      </Flex>
     </>
   );
 }
