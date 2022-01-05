@@ -24,9 +24,7 @@ export default function Home() {
         </Flex>
         <Hero />
       </Wrap>
-      <Flex justify="center">
-        <Portifolio />
-      </Flex>
+      <Portifolio />
     </>
   );
 }
