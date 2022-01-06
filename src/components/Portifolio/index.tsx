@@ -91,6 +91,8 @@ const myProjects = () => {
           <Button
             onClick={project.link}
             colorScheme="gray"
+            transition="all 0.3s"
+            _hover={{ filter: "brightness(0.5)"}}
             m="2"
             leftIcon={<FaGlobe />}
           >
@@ -99,6 +101,8 @@ const myProjects = () => {
           <Button
             onClick={project.description}
             colorScheme="gray"
+            transition="all 0.3s"
+            _hover={{ filter: "brightness(0.5)"}}
             m="2"
             leftIcon={<FaInfo />}
           >
