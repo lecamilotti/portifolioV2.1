@@ -7,7 +7,8 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { FaGithub, FaGlobe } from "react-icons/fa";
+import { format } from "path/posix";
+import { FaGithub, FaGlobe, FaInfo } from "react-icons/fa";
 import projects from "../projects";
 
 interface projectProps {
@@ -22,58 +23,89 @@ interface projectProps {
 const myProjects = () => {
   return projects.map((project: projectProps) => {
     return (
-      <>
+      <SimpleGrid
+        w="1280px"
+        mt={{ md: "20", lg: "2" }}
+        p={{ sm: "10", md: "10", lg: "10", xl: "10" }}
+        bg="gray.800"
+        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
+        spacing="4"
+        textAlign="center"
+        rounded="lg"
+        color="gray.600"
+        key={project.name}
+      >
         <Text
           as="title"
           fontSize="2xl"
-          fontWeight="bold"
-          mb={4}
-          color="gray.800"
+          m="auto"
+          p="auto"
           justifyContent="center"
+          alignItems="center"
+          fontWeight="bold"
         >
           Projects
         </Text>
-        <SimpleGrid
-          w="1280px"
-          p={{ sm: "10", md: "10", lg: "10", xl: "10" }}
-          bg="gray.800"
-          columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-          spacing="4"
-          textAlign="center"
-          rounded="lg"
-          color="gray.500"
+        <Box
           key={project.name}
+          boxShadow="2xl"
+          w={["100%", "100%", "100%", "100%"]}
+          h={["100%", "100%", "100%", "100%"]}
+          maxW={["100%", "100%", "100%", "100%"]}
+          rounded="2xl"
+          shadow={["lg", "lg", "lg", "lg"]}
+          bg="gray.700"
+          mb="5"
         >
-          <Box
-            key={project.name}
-            boxShadow="lg"
-            maxW={400}
-            maxH={400}
-            rounded="lg"
-            bg="white"
+          <Text color="whiteAlpha.800" fontWeight="bold" fontSize="2xl">
+            {project.name}
+          </Text>
+          <HStack>
+            <Image
+              src={project.image}
+              justifyContent="center"
+              m="auto"
+              p="auto"
+              maxW="500px"
+              w={800}
+              align="center"
+              objectFit="cover"
+              alt={project.alt}
+            />
+
+            {/* <Text>{project.description}</Text> */}
+          </HStack>
+          <Button
+            colorScheme="gray"
+            onClick={() => {
+              window.location.href = project.gitHub;
+            }}
+            transition="all 0.3s"
+            _hover={{ filter: "brightness(0.5)"}}
+            
+            leftIcon={<FaGithub />}
+            m="2"
           >
-            <Image src={project.image} size="500px" alt={project.alt} />
-            <HStack>
-              <Text>{project.name}</Text>
-              <Text>{project.description}</Text>
-              <Button
-                colorScheme="gray"
-                onClick={project.gitHub}
-                leftIcon={<FaGithub />}
-              >
-                Github
-              </Button>
-              <Button
-                onClick={project.link}
-                colorScheme="gray"
-                leftIcon={<FaGlobe />}
-              >
-                Live Demo
-              </Button>
-            </HStack>
-          </Box>
-        </SimpleGrid>
-      </>
+            Github
+          </Button>
+          <Button
+            onClick={project.link}
+            colorScheme="gray"
+            m="2"
+            leftIcon={<FaGlobe />}
+          >
+            Live Demo
+          </Button>
+          <Button
+            onClick={project.description}
+            colorScheme="gray"
+            m="2"
+            leftIcon={<FaInfo />}
+          >
+            Description
+          </Button>
+        </Box>
+      </SimpleGrid>
     );
   });
 };
