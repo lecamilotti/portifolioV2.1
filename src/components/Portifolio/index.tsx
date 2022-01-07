@@ -117,3 +117,10 @@ const myProjects = () => {
 export default function Portifolio() {
   return <Flex justify="center">{myProjects()}</Flex>;
 }
+
+// server side rendering the image
+const projectImages = () => {
+  return projects.map((project: projectProps) => {
+    return <img src={project.image} />;
+  });
+};
