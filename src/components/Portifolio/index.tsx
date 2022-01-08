@@ -23,30 +23,42 @@ const myProjects = () => {
   return projects.map((project: projectProps) => {
     return (
       <SimpleGrid
-        w="1280px"
-        mt={{ md: "20", lg: "2" }}
-        p={{ sm: "10", md: "10", lg: "10", xl: "10" }}
+        key={project.name}
+        columns={[1, 2, 2, 3]}
+        spacing={[10, 10, 10, 10]}
         bg="gray.800"
-        columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
-        spacing="4"
         textAlign="center"
+        justifyContent={["center", "center", "center", "center"]}
+        alignItems="center"
         rounded="lg"
         color="gray.600"
-        key={project.name}
+        p={[10, 10, 10, 10]}
       >
-      
+        {/* <Text
+          as="title"
+          fontSize="2xl"
+          m="auto"
+          p="auto"
+          justifyContent="center"
+          alignItems="center"
+          fontWeight="bold"
+        >
+          Projects
+        </Text> */}
         <Box
+        p={[10, 10, 10, 10]}
           key={project.name}
           boxShadow="2xl"
-          w={["400px", "400px", "400px", "400px"]}
-          h={["400px", "400px", "400px", "400px"]}
-          maxW={["400px", "400px", "400px", "400px"]}
+          w="28rem"
+          maxW="30rem"
           rounded="2xl"
           shadow={["lg", "lg", "lg", "lg"]}
           bg="gray.700"
-          mb="5"
+          m="auto"
+          pt="3"
+          pb="3"
         >
-          <Text color="whiteAlpha.800" mt="2" fontWeight="bold" fontSize="2xl">
+          <Text color="whiteAlpha.800" fontWeight="bold" fontSize="2xl">
             {project.name}
           </Text>
           <HStack>
@@ -55,8 +67,9 @@ const myProjects = () => {
               justifyContent="center"
               m="auto"
               p="auto"
-              maxW="400px"
-              w={400}
+              maxW="500px"
+              fit="scale-down"
+              width={["100%", "100%", "100%", "100%"]}
               align="center"
               objectFit="cover"
               alt={project.alt}
@@ -66,12 +79,11 @@ const myProjects = () => {
           </HStack>
           <Button
             colorScheme="gray"
-            onClick={() => {
-              window.location.href = project.gitHub;
-            }}
+            variant="outline"
+            href={project.link}
+            target="_blank"
             transition="all 0.3s"
-            _hover={{ filter: "brightness(0.5)"}}
-            
+            _hover={{ filter: "brightness(0.5)" }}
             leftIcon={<FaGithub />}
             m="2"
           >
@@ -81,7 +93,7 @@ const myProjects = () => {
             onClick={project.link}
             colorScheme="gray"
             transition="all 0.3s"
-            _hover={{ filter: "brightness(0.5)"}}
+            _hover={{ filter: "brightness(0.5)" }}
             m="2"
             leftIcon={<FaGlobe />}
           >
@@ -91,7 +103,7 @@ const myProjects = () => {
             onClick={project.description}
             colorScheme="gray"
             transition="all 0.3s"
-            _hover={{ filter: "brightness(0.5)"}}
+            _hover={{ filter: "brightness(0.5)" }}
             m="2"
             leftIcon={<FaInfo />}
           >
