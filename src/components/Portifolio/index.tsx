@@ -119,8 +119,8 @@ export default function Portifolio() {
 }
 
 // server side rendering the image
-const projectImages = () => {
-  return projects.map((project: projectProps) => {
-    return <img src={project.image} />;
-  });
-};
+// const projectImages = () => {
+//   return projects.map((project: projectProps) => {
+//     return <img src={project.image} />;
+//   });
+// };
