@@ -1,10 +1,10 @@
 {
+
   "compilerOptions": {
+
     "target": "es5",
     "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+      "dom", "dom.iterable", "esnext"
     ],
     "allowJs": true,
     "skipLibCheck": true,
@@ -18,13 +18,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve"
+
   },
   "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "src/components/Aside/Programmer.tsx"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "next-env.d.ts", "**/*.ts", "**/*.tsx", "src", "public", "src/components/Aside/Programmer.tsx"
+  ],
+  "exclude": [ "node_modules" ]
+
 }

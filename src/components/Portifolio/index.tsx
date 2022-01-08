@@ -7,7 +7,6 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { format } from "path/posix";
 import { FaGithub, FaGlobe, FaInfo } from "react-icons/fa";
 import projects from "../projects";
 
@@ -35,29 +34,19 @@ const myProjects = () => {
         color="gray.600"
         key={project.name}
       >
-        <Text
-          as="title"
-          fontSize="2xl"
-          m="auto"
-          p="auto"
-          justifyContent="center"
-          alignItems="center"
-          fontWeight="bold"
-        >
-          Projects
-        </Text>
+      
         <Box
           key={project.name}
           boxShadow="2xl"
-          w={["100%", "100%", "100%", "100%"]}
-          h={["100%", "100%", "100%", "100%"]}
-          maxW={["100%", "100%", "100%", "100%"]}
+          w={["400px", "400px", "400px", "400px"]}
+          h={["400px", "400px", "400px", "400px"]}
+          maxW={["400px", "400px", "400px", "400px"]}
           rounded="2xl"
           shadow={["lg", "lg", "lg", "lg"]}
           bg="gray.700"
           mb="5"
         >
-          <Text color="whiteAlpha.800" fontWeight="bold" fontSize="2xl">
+          <Text color="whiteAlpha.800" mt="2" fontWeight="bold" fontSize="2xl">
             {project.name}
           </Text>
           <HStack>
@@ -66,8 +55,8 @@ const myProjects = () => {
               justifyContent="center"
               m="auto"
               p="auto"
-              maxW="500px"
-              w={800}
+              maxW="400px"
+              w={400}
               align="center"
               objectFit="cover"
               alt={project.alt}
