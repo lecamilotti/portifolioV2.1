@@ -23,16 +23,20 @@ const myProjects = () => {
   return projects.map((project: projectProps) => {
     return (
       <SimpleGrid
+      templateColumns="repeat(auto-fit(2, 3fr))"
+      gridAutoFlow={["column", "row"]}
         key={project.name}
-        columns={[1, 2, 2, 3]}
+        
+        
         spacing={[10, 10, 10, 10]}
-        bg="gray.800"
+       
         textAlign="center"
         justifyContent={["center", "center", "center", "center"]}
         alignItems="center"
         rounded="lg"
         color="gray.600"
         p={[10, 10, 10, 10]}
+        
       >
         {/* <Text
           as="title"
@@ -46,7 +50,7 @@ const myProjects = () => {
           Projects
         </Text> */}
         <Box
-        p={[10, 10, 10, 10]}
+
           key={project.name}
           boxShadow="2xl"
           w="28rem"
@@ -57,6 +61,7 @@ const myProjects = () => {
           m="auto"
           pt="3"
           pb="3"
+          
         >
           <Text color="whiteAlpha.800" fontWeight="bold" fontSize="2xl">
             {project.name}
