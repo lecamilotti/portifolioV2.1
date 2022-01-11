@@ -9,7 +9,8 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { FaGithub, FaGlobe, FaInfo } from "react-icons/fa";
+import { useState } from "react";
+import { FaGithub, FaGlobe } from "react-icons/fa";
 import projects from "../projects";
 
 interface projectProps {
@@ -19,9 +20,12 @@ interface projectProps {
   alt: string;
   link: string;
   gitHub: string;
+  useState: boolean;
 }
 
-const myProjects = () => {
+
+const myProjects = () => {  
+  
   return projects.map((project: projectProps) => {
     return (
       <SimpleGrid
@@ -94,6 +98,7 @@ const myProjects = () => {
 };
 
 export default function Portifolio() {
+  const [showProjects, setShowProjects] = useState(false);
   return (
     <Grid justify="center">
       {myProjects()}
@@ -110,13 +115,19 @@ export default function Portifolio() {
         justifyContent="center"
         _hover={{ filter: "brightness(0.8)" }}
         transition="all 0.3s ease-in-out"
+        onClick={() => setShowProjects(!showProjects)}
       >
-        More...
+        {showProjects ? "Hide Projects" : "Show All Projects"}
       </Button>
+
     </Grid>
   );
 }
 
+
+function setShowProjects(arg0: boolean): void {
+  throw new Error("Function not implemented.");
+}
 // server side rendering the image
 // const projectImages = () => {
 //   return projects.map((project: projectProps) => {
