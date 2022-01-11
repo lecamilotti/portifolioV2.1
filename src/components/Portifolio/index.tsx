@@ -9,7 +9,7 @@ import {
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaGithub, FaGlobe } from "react-icons/fa";
 import projects from "../projects";
 
@@ -23,9 +23,7 @@ interface projectProps {
   useState: boolean;
 }
 
-
-const myProjects = () => {  
-  
+const myProjects = () => {
   return projects.map((project: projectProps) => {
     return (
       <SimpleGrid
@@ -57,8 +55,15 @@ const myProjects = () => {
             />
           </Box>
         </Box>
-        <GridItem m="auto" p="1rem" alignItems="center" align="center">
-          <Flex justifyContent="center" w="100%">
+        <GridItem
+          m="auto"
+          p="1rem"
+          alignItems="center"
+          mb="1rem"
+          align="center"
+        >
+          {project.name}
+          <Flex justifyContent="center" mt="1rem" w="100%">
             <HStack spacing="1rem" fontSize="lg">
               <Button
                 as="a"
@@ -99,6 +104,18 @@ const myProjects = () => {
 
 export default function Portifolio() {
   const [showProjects, setShowProjects] = useState(false);
+
+  useEffect(() => {
+    effect();
+    }, []);
+  
+ const effect = () => {
+   setTimeout(() => {
+    setShowProjects(true);
+   }, 500);
+ };
+
+ if (showProjects === true) {
   return (
     <Grid justify="center">
       {myProjects()}
@@ -117,16 +134,37 @@ export default function Portifolio() {
         transition="all 0.3s ease-in-out"
         onClick={() => setShowProjects(!showProjects)}
       >
-        {showProjects ? "Hide Projects" : "Show All Projects"}
+        {showProjects ? "Hide Projects" : "Show Projects"}
       </Button>
-
+      {showProjects ? myProjects() : null}
     </Grid>
   );
+ } else {
+  return (
+    <Grid justify="center">
+      <Button
+        as="a"
+        w="20%"
+        bg="gray.700"
+        m="auto"
+        p="auto"
+        fontSize={["sm", "md", "lg"]}
+        mt="2rem"
+        cursor="pointer"
+        alignContent="center"
+        justifyContent="center"
+        _hover={{ filter: "brightness(0.8)" }}
+        transition="all 0.3s ease-in-out"
+        onClick={() => setShowProjects(!showProjects)}
+      >
+        {showProjects ? "Hide Projects" : "Show Projects"}
+      </Button>
+    </Grid>
+  )
 }
 
-
-function setShowProjects(arg0: boolean): void {
-  throw new Error("Function not implemented.");
+// function setShowProjects(arg0: boolean): void {
+//   throw new Error("Function not implemented.");
 }
 // server side rendering the image
 // const projectImages = () => {
