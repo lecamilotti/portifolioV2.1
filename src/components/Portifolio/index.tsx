@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Flex,
+  Grid,
   GridItem,
   HStack,
   Image,
@@ -24,9 +25,13 @@ const myProjects = () => {
   return projects.map((project: projectProps) => {
     return (
       <SimpleGrid
-      key={project.name}
-      minChildWidth='350px'
-      spacing='40px'     
+        key={project.name}
+        w="80%"
+        minChildWidth="350px"
+        spacing="2rem"
+        m="auto"
+        mt="2rem"
+        bg="gray.800"
       >
         <Box>
           <Box
@@ -44,17 +49,19 @@ const myProjects = () => {
             />
           </Box>
         </Box>
-        <GridItem>
-          <Flex justifyContent="center" alignItems="center" w="100%">
-            <HStack spacing="0.5rem">
+        <GridItem m="auto" p="1rem" alignItems="center" align="center">
+          <Flex justifyContent="center" w="100%">
+            <HStack spacing="1rem" fontSize="lg">
               <Button
                 as="a"
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="outline"
+                _hover={{ filter: "brightness(0.5)" }}
+                transition="all 0.3s ease-in-out"
                 color="gray.50"
-                leftIcon={<FaGlobe/>}
+                leftIcon={<FaGlobe />}
               >
                 <Text fontSize="sm">Live</Text>
               </Button>
@@ -64,35 +71,47 @@ const myProjects = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 variant="outline"
+                _hover={{ filter: "brightness(0.5)" }}
+                transition="all 0.3s ease-in-out"
                 color="gray.50"
                 leftIcon={<FaGithub />}
               >
                 <Text fontSize="sm">GitHub</Text>
               </Button>
-              <Button
-                as="a"
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                variant="outline"
-                color="gray.50"
-                leftIcon={<FaInfo />}
-              >
-                <Text fontSize="sm">Info</Text>
-              </Button>
             </HStack>
           </Flex>
-          <Text fontSize="sm">{project.description}</Text>
+          <Text fontSize="sm" mt="2rem">
+            {project.description}
+          </Text>
         </GridItem>
       </SimpleGrid>
     );
   });
 };
 
-export default myProjects;
-// export default function Portifolio() {
-//   return <Flex justify="center">{myProjects()}</Flex>;
-// }
+export default function Portifolio() {
+  return (
+    <Grid justify="center">
+      {myProjects()}
+      <Button
+        as="a"
+        w="20%"
+        bg="gray.700"
+        m="auto"
+        p="auto"
+        fontSize={["sm", "md", "lg"]}
+        mt="2rem"
+        cursor="pointer"
+        alignContent="center"
+        justifyContent="center"
+        _hover={{ filter: "brightness(0.8)" }}
+        transition="all 0.3s ease-in-out"
+      >
+        More...
+      </Button>
+    </Grid>
+  );
+}
 
 // server side rendering the image
 // const projectImages = () => {
