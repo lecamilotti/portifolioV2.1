@@ -31,7 +31,9 @@ const myProjects = () => {
         spacing="2rem"
         m="auto"
         mt="2rem"
-        bg="gray.800"
+        bg="gray.700"
+        borderRadius="xl"
+        boxShadow="xl"
       >
         <Box>
           <Box
@@ -46,6 +48,8 @@ const myProjects = () => {
               maxWidth="100%"
               maxHeight="100%"
               objectFit="cover"
+              _hover={{ filter: "brightness(0.2)" }}
+              transition="all 0.3s ease-in-out"
             />
           </Box>
         </Box>
