@@ -24,6 +24,7 @@ interface projectProps {
 }
 
 const myProjects = () => {
+ 
   return projects.map((project: projectProps) => {
     return (
       <SimpleGrid
