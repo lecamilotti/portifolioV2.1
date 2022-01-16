@@ -27,18 +27,20 @@ const myProjects = () => {
  
   return projects.map((project: projectProps) => {
     return (
+      <Flex direction="column" h="100vh"  key={project.name}>
       <SimpleGrid
-        key={project.name}
-        w="80%"
-        minChildWidth="350px"
-        spacing="2rem"
-        m="auto"
-        mt="2rem"
-        bg="gray.700"
-        borderRadius="xl"
-        boxShadow="xl"
+      
+        flex='1'
+        gap="4"
+        minChildWidth="320px"
+        align="flex-start"
       >
-        <Box>
+        <Box
+        p={["6", "8"]}
+        bg="gray.800"
+        borderRadius={8}
+        pb="4"
+        >
           <Box
             as="a"
             href={project.link}
@@ -55,7 +57,7 @@ const myProjects = () => {
               transition="all 0.3s ease-in-out"
             />
           </Box>
-        </Box>
+        
         <GridItem
           m="auto"
           p="1rem"
@@ -97,8 +99,11 @@ const myProjects = () => {
           <Text fontSize="sm" mt="2rem">
             {project.description}
           </Text>
+          
         </GridItem>
+        </Box>
       </SimpleGrid>
+      </Flex>
     );
   });
 };
