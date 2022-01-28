@@ -1,4 +1,5 @@
 import { Flex, Wrap } from "@chakra-ui/react";
+import About from "../components/About/Index";
 import { Header } from "../components/Header";
 import Hero from "../components/Hero";
 import Portifolio from "../components/Portifolio";
@@ -24,6 +25,7 @@ export default function Home() {
         </Flex>
         <Hero />
       </Wrap>
+      <About />
       <Portifolio />
     </>
   );
