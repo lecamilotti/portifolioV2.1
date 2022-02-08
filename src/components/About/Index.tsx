@@ -1,4 +1,4 @@
-import { Avatar, Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
 export default function About() {
   return (
@@ -13,23 +13,16 @@ export default function About() {
           borderColor="primary"
           borderRadius="50%"
         />
-        <Box as="span" display="block" flex="2" maxW="300px" m={4} p={5}>
-          <Text 
-          
-          fontWeight="bold"
-          color="gray.50"
-          fontSize="2xl"
-          >
-            About Me
-          </Text>
-          <Text 
-           
-           color="gray.50"
-           fontSize="2xl"
-          >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti sed ab, commodi in necessitatibus, neque incidunt alias eius cum eos ea! Et nemo aut unde fugiat corporis voluptate, aspernatur repudiandae.
-          </Text>
-          </Box>
+      </Box>
+      <Box as="span" display="block" flex="1" m="auto" p="5">
+        <Text fontWeight="bold" color="gray.50" fontSize="2xl">
+          About Me
+        </Text>
+        <Text color="gray.50" fontSize="2xl">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti sed
+          ab, commodi in necessitatibus, neque incidunt alias eius cum eos ea!
+          Et nemo aut unde fugiat corporis voluptate, aspernatur repudiandae.
+        </Text>
       </Box>
     </Flex>
   );
