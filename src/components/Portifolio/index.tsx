@@ -7,6 +7,7 @@ import {
   Image,
   SimpleGrid,
   Text,
+  transition,
 } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import { FaGithub, FaGlobe } from "react-icons/fa";
@@ -130,7 +131,7 @@ export default function Portifolio() {
               transition="all 0.3s ease-in-out"
               onClick={() => setShowProjects(true)}
             >
-              {showProjects ? "Hide" : "Projects..."}
+              {showProjects ? "Hide..." : "Projects..."}
             </Button>
           </HStack>
         </>
@@ -157,8 +158,9 @@ export default function Portifolio() {
             _hover={{ filter: "brightness(0.8)" }}
             transition="all 0.3s ease-in-out"
             onClick={() => setShowProjects(false)}
+          
           >
-            {!showProjects ? "Projects..." : "Hide"}
+            {!showProjects ? "Projects..." : "Hide..."}
           </Button>
         </HStack>
       </>
