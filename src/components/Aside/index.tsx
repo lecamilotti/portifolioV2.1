@@ -7,7 +7,7 @@ export type AsideProps = Omit<ImageProps, "width" | "height" | "src">;
 export const Aside: React.FC<AsideProps> = (props) => {
   return (
     <Flex maxW={1280} m="auto"  width={["100%", "100%", "100%", "100%"]}>
-      <Box ml="auto" mt="20" pt="10" >
+      <Box ml="auto" alignItems="center" justifyContent="center" pt="10" >
 
       <Image 
       src={codePic}

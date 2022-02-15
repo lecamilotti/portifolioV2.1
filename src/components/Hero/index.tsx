@@ -64,10 +64,10 @@ export default function Hero() {
             
             Hi, I'm Leandro Camilotti
           </Text>
-          <Text as="h2" color="gray.50" m={2} fontWeight="bold" fontSize="2xl">
-            Front End Developer
+          <Text as="h2" color="gray.50" fontWeight="bold" fontSize="2xl">
+           Front End Developer
           </Text>
-          <Text as="h3">
+          <Text as="h3" mt="2rem">
             Welcome to my personal page.
             <br />
             Here you can find my projects, my skills and contact me.
