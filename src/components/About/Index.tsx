@@ -15,13 +15,13 @@ export default function About() {
         />
       </Box>
       <Box as="span" display="block" flex="1" m="auto" p="5">
-        <Text fontWeight="bold" color="gray.50" fontSize="2xl">
-          About Me
+        <Text fontWeight="bold" color="gray.50" fontSize="2xl" mb="2rem">
+          Hi there, I'm Leandro Camilotti.
         </Text>
         <Text color="gray.50" fontSize="2xl">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti sed
-          ab, commodi in necessitatibus, neque incidunt alias eius cum eos ea!
-          Et nemo aut unde fugiat corporis voluptate, aspernatur repudiandae.
+        A passionate and ambitious web developer who believes that web applications make a positive impact in people's life.
+         I am always proactively learning new ways to build my skill set and add tools that will compliment those skills. 
+         I`m currently on a Code BootCamp building my experience with own projects using tools like HTML, CSS, JavaScript, ReactJS, TypeScript, styled components, express, and Node.js.
         </Text>
       </Box>
     </Flex>
