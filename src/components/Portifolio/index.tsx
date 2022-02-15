@@ -2,7 +2,6 @@ import {
   Box,
   Button,
   Flex,
-  Grid,
   GridItem,
   HStack,
   Image,
@@ -27,7 +26,7 @@ const myProjects = () => {
   return projects.map((project: projectProps) => {
     return (
       <Flex direction="column" h="100vh" key={project.name}>
-        <SimpleGrid flex="1" gap="4" minChildWidth="320px" align="flex-start">
+        <SimpleGrid flex="1" gap="4" minChildWidth="320px" m="auto" p="auto" justifyContent="center" align="center">
           <Box p={["6", "8"]} bg="gray.800" borderRadius={8} pb="4">
             <Box
               as="a"
@@ -112,17 +111,17 @@ export default function Portifolio() {
     for (let i = 0; i < myProjects().length; i++) {
       return (
         <>
-          <Flex flex="1" justify="center" align="center" ml="30%">
+          <Flex flex="1" h="80vh" justify="center" align="center" mt="5rem">
             {myProjects()[i]}
           </Flex>
           <HStack>
             <Button
               as="a"
-              w="20%"
+              w="20rem"
               bg="gray.700"
               m="auto"
               p="auto"
-              fontSize={["sm", "md", "lg"]}
+              fontSize="1.5rem"
               mt="2rem"
               cursor="pointer"
               alignContent="center"
@@ -131,7 +130,7 @@ export default function Portifolio() {
               transition="all 0.3s ease-in-out"
               onClick={() => setShowProjects(true)}
             >
-              {showProjects ? "Show less projects..." : "Show more projects..."}
+              {showProjects ? "Hide" : "Projects..."}
             </Button>
           </HStack>
         </>
@@ -140,17 +139,17 @@ export default function Portifolio() {
   } else {
     return (
       <>
-        <Flex flex="1" justify="center">
+        <Flex flex="1" h="80vh" justify="center" align="center" mt="5rem">
           {myProjects()}
         </Flex>
         <HStack>
           <Button
             as="a"
-            w="20%"
+            w="20rem"
             bg="gray.700"
             m="auto"
             p="auto"
-            fontSize={["sm", "md", "lg"]}
+            fontSize="1.5rem"
             mt="2rem"
             cursor="pointer"
             alignContent="center"
@@ -159,7 +158,7 @@ export default function Portifolio() {
             transition="all 0.3s ease-in-out"
             onClick={() => setShowProjects(false)}
           >
-            {!showProjects ? "Show more projects..." : "Show less projects..."}
+            {!showProjects ? "Projects..." : "Hide"}
           </Button>
         </HStack>
       </>
